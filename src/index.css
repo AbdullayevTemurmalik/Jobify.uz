@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .talent-sidebar {
+    margin-left: 0;
+  }
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0;
+}
+
+/* Notification Badge uchun maxsus tezkor animatsiya */
+@keyframes notification-glow {
+
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.9);
+    /* Kuchli nur */
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(0.8);
+    /* Kichrayish */
+    box-shadow: 0 0 4px rgba(220, 38, 38, 0.3);
+    /* Kamroq nur */
+    opacity: 0.6;
+  }
+}
+
+.animate-glow-fast {
+  animation: notification-glow 0.7s ease-in-out infinite;
+}
